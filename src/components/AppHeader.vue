@@ -1,94 +1,93 @@
+<script setup></script>
 <template>
-    <header class="app-header">
-        <div class="logo">
-            <img src="/path/to/logo.png" alt="Logo" />
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="#">MUSINSA</a>
+                <input />
+            </div>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="offcanvas offcanvas-end text-bg-dark"
+                tabindex="-1"
+                id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                        Dark offcanvas
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <nav class="nav-links">
-            <ul>
-                <li>
-                    <router-link to="/">Home</router-link>
-                </li>
-                <li>
-                    <router-link to="/about">About</router-link>
-                </li>
-                <li>
-                    <router-link to="/posts">Posts</router-link>
-                </li>
-                <li>
-                    <router-link to="/contact">Contact</router-link>
-                </li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search" />
-            <button>Search</button>
-        </div>
-    </header>
+    </nav>
 </template>
-
-<style scoped>
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo img {
-    height: 40px;
-}
-
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links li:last-child {
-    margin-right: 0;
-}
-
-.nav-links a {
-    color: #333333;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    color: #007bff;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input[type='text'] {
-    border: none;
-    background-color: #f2f2f2;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.search-bar button {
-    border: none;
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
-</style>
